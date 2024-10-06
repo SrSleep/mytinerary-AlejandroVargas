@@ -9,8 +9,6 @@ import 'swiper/css';
 import './Slider.css';
 
 const Slider = (data) => {
-  console.log(data.data);
-
   return (
     <>
       <Swiper
@@ -43,15 +41,15 @@ const Slider = (data) => {
         className='mySwiper'>
         {data?.data.map((d, i) => (
           <SwiperSlide key={i}>
-            <div className='mb-6 relative bg-white shadow-md rounded-xl overflow-hidden '>
-              <div className=' h-56 rounded-xl  flex justify-center items-center '>
+            <div className='mb-6 relative shadow-md rounded-xl overflow-hidden '>
+              <div className='shadow-text h-56 rounded-xl  flex justify-center items-center '>
                 <img
                   src={d.img}
                   alt={d.name}
                   className='h-44 w-44 object-cover'
                 />
               </div>
-              <div className='p-4 absolute bottom-3 right-3'>
+              <div className='p-4 absolute bottom-3 right-3 z-20'>
                 <p className='text-white font-bold text-3xl'>{d.name}</p>
               </div>
             </div>
