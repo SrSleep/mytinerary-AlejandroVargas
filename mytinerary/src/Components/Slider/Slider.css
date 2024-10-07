@@ -6,7 +6,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: flex;
@@ -17,6 +16,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .shadow-text {
+    &::after {
+      content: '';
+      @apply h-24 bg-gradient-to-b from-gray-800/0 to-gray-900/80 absolute w-full z-10 bottom-0;
+    }
   }
 }
 .swiper-button-prev {
