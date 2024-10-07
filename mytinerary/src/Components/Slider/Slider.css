@@ -28,12 +28,18 @@
 .swiper-button-prev {
   &::after {
     content: 'prev';
-    color: rgb(96, 236, 16);
+    color: #88BB00;
   }
 }
 .swiper-button-next {
   &::after {
     content: 'next';
-    color: rgb(96, 236, 16);
+    color: #88BB00;
   }
 }
+
+.swiper-pagination-bullet-active{
+  background-color: #88BB00;
+}
+
+

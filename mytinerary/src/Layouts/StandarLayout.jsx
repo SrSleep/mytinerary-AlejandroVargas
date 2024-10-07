@@ -5,9 +5,8 @@ export default function StandarLayout() {
   return (
     <>
       <Header />
-      <main className='max-w-[1200px] w-full mx-auto pt-24'>
+      <main className='max-w-[1200px] w-full mx-auto pt-16'>
         <Outlet></Outlet>
-        <div className='h-96'></div>
       </main>
       <Footer />
     </>

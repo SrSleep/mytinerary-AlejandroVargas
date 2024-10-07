@@ -1,6 +1,6 @@
 // Import Swiper React components
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Navigation, Pagination} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css/navigation';
@@ -11,6 +11,12 @@ import './Slider.css';
 const Slider = (data) => {
   return (
     <>
+      <div className='text-white mb-6'>
+        <div>
+          <p className='text-xl'>Plan your trip</p>
+          <h3 className='text-3xl md:text-7xl'>Where to next?</h3>
+          </div>
+      </div>
       <Swiper
         slidesPerView={1}
         slidesPerGroup={1}
