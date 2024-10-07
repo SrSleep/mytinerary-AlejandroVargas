@@ -46,12 +46,12 @@ export const data = [
   },
   {
     id: 10,
-    name: 'oaxaca',
+    name: 'Oaxaca',
     img: '/Images/oaxaca.jpg',
   },
   {
     id: 11,
-    name: 'paris',
+    name: 'París',
     img: '/Images/paris.jpg',
   },
   {
