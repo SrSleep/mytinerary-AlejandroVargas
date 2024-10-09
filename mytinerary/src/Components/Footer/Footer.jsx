@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Footer = (links) => {
   return (
     <>
-      <div className='flex items-center mt-6  justify-center flex-wrap bg-slate-900 py-2 bg-gray-900/80 text-gray-300'>
+      <div className='flex items-center justify-center flex-wrap bg-slate-900 py-2 bg-gray-900/80 text-gray-300'>
         <div className='flex justify-center mx-2 items-center'>
           {links?.Links.map((link) => (
             <a key={link.id}>
