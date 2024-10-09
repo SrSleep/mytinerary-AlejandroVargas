@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css/navigation';
@@ -11,19 +11,24 @@ import './Slider.css';
 const Slider = (data) => {
   return (
     <>
-      <div className='text-white mb-6'>
+      <div className='text-white my-7 '>
         <div>
           <p className='text-xl'>Plan your trip</p>
           <h3 className='text-3xl md:text-7xl'>Where to next?</h3>
-          </div>
+        </div>
       </div>
       <Swiper
+        loop={true}
         slidesPerView={1}
         slidesPerGroup={1}
         spaceBetween={30}
         freeMode={true}
         navigation={true}
-        modules={[Navigation, Pagination]}
+        modules={[Autoplay, Navigation, Pagination]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           dynamicBullets: true,
         }}

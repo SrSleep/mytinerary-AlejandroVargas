@@ -7,21 +7,21 @@ const Header = (links) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div className='fixed t-0 l-0 z-50 w-full backdrop-blur-md bg-gray-900/80'>
+    <div className='fixed left-0 right-0 t-0 l-0 z-50 backdrop-blur-md bg-gray-900/80'>
       <nav>
         <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <a
             href='#'
             className='flex items-center space-x-3 rtl:space-x-reverse'>
             <img src={travel} className='h-8' alt='Logo of myTinerary' />
-            <span className='self-center text-2xl font-semibold whitespace-nowrap text-white'>
+            <span className='text-lg self-center md:text-2xl font-semibold whitespace-nowrap text-white'>
               MyTinerary
             </span>
           </a>
           <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
             <button
               type='button'
-              className='flex items-center text-white font-medium rounded-lg text-sm px-3 py-2 text-center bg-brand-default hover:bg-brand-hoverD '>
+              className='flex items-center text-white font-medium rounded-lg text-sm px-1  md:px-3 md:py-2 text-center bg-brand-default hover:bg-brand-hoverD '>
               <UserCircle className='w-5 h-5 me-1' color="#f7f7f7" />
               Login
             </button>

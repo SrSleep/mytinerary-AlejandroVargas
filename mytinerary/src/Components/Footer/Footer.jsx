@@ -14,7 +14,6 @@ const Footer = (links) => {
               </NavLink>
             </a>
           ))}
-          
         </div>
         <div className='flex justify-center items-center mx-2 p-2'>
           <div className='flex flex-row items-center rounded-lg px-3'>
@@ -37,11 +36,11 @@ const Footer = (links) => {
           </div>
         </div>
         <div className='flex flex-col md:flex-row items-center p-2 gap-2'>
-          <p>Contact Us: 742 de Evergreen Terrace</p>
+          <p><span className="text-brand-default">Contact Us:</span> 742 de Evergreen Terrace </p>
           <span className="hidden md:block text-brand-default">|</span>
-          <p>Email: Contact@mytinerary.com</p>
+          <p><span className="text-brand-default">Email:</span> Contact@mytinerary.com</p>
           <span className="hidden md:block text-brand-default">|</span>
-          <p>Phone: (123) 764 - 84377</p>
+          <p><span className="text-brand-default">Phone:</span> (123) 764 - 84377</p>
         </div>
       </div>
     </>
