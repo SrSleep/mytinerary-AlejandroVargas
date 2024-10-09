@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Cities() {
   return (
-    <div>Cities</div>
+    <div className='h-screen flex items-center justify-center text-brand-default text-9xl'>Cities</div>
   )
 }

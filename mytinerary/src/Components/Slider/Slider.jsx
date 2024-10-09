@@ -45,8 +45,8 @@ const Slider = (data) => {
           },
         }}
         className='mySwiper'>
-        {data?.data.map((d, i) => (
-          <SwiperSlide key={i}>
+        {data?.data.map((d) => (
+          <SwiperSlide key={d.id}>
             <div className='mb-6 relative shadow-md rounded-xl overflow-hidden '>
               <div className='shadow-text h-56 rounded-xl  flex justify-center items-center '>
                 <img
