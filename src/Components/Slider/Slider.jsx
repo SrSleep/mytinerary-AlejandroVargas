@@ -32,6 +32,11 @@ const Slider = (data) => {
         pagination={{
           dynamicBullets: true,
         }}
+        effect='fade'
+        fadeEffect={{
+          crossFade: true, 
+        }}
+        speed={1100}
         breakpoints={{
           480: {
             slidesPerView: 2,
