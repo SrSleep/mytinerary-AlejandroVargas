@@ -27,7 +27,7 @@ export const data = [
   {
     id: 6,
     name: 'Chiang Mai',
-    img: '/Images/barcelona.jpg',
+    img: '/Images/chiangMai',
   },
   {
     id: 7,
@@ -57,6 +57,6 @@ export const data = [
   {
     id: 12,
     name: 'San Miguel de Allende',
-    img: '/Images/kioto.jpg',
+    img: '/Images/sanMiguelDeAllende.jpg',
   },
 ];
