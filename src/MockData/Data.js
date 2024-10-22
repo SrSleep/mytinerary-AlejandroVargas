@@ -27,7 +27,7 @@ export const data = [
   {
     id: 6,
     name: 'Chiang Mai',
-    img: '/Images/chiangMai',
+    img: '/Images/chiangMai.jpg',
   },
   {
     id: 7,

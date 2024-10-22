@@ -2,3 +2,7 @@
   background: rgb(69, 103, 0);
   background: linear-gradient(90deg, rgba(69, 103, 0, 1) 0%, rgba(0, 0, 0, 0.4962359943977591) 10%, rgba(0, 0, 0, 0.7091211484593838) 49%, rgba(0, 0, 0, 0.5018382352941176) 90%, rgba(60, 91, 0, 1) 100%);
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}

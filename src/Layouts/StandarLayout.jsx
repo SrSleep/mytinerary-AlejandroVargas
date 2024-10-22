@@ -8,7 +8,7 @@ export default function StandarLayout() {
   return (
     <>
       <Header Links={links} />
-      <main className='custom-gradient w-full'>
+      <main className=' w-full'>
         <Outlet></Outlet>
       </main>
       <Footer Links={links} />
