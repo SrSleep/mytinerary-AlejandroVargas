@@ -26,7 +26,7 @@ const Slider = (data) => {
         navigation={true}
         modules={[Autoplay, Navigation, Pagination]}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -36,7 +36,7 @@ const Slider = (data) => {
         fadeEffect={{
           crossFade: true, 
         }}
-        speed={1100}
+        speed={2000}
         breakpoints={{
           480: {
             slidesPerView: 2,
