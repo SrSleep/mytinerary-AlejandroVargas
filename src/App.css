@@ -6,3 +6,11 @@
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
+.text-custom-gradient {
+  background: #669900;
+background: linear-gradient(to bottom right, #669900 0%, #88BB00 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}

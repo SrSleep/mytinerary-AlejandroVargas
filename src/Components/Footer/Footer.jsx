@@ -4,15 +4,13 @@ const Footer = (links) => {
   return (
     <>
       <div className='flex items-center justify-center flex-wrap bg-slate-900 py-2 bg-gray-900/80 text-gray-300'>
-        <div className='flex justify-center mx-2 items-center'>
+        <div className='flex justify-center mx-2 items-center gap-2'>
           {links?.Links.map((link) => (
-            <a key={link.id}>
-              < NavLink to={link.to} className={({ isActive }) => isActive ?
-                "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL " :
-                "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0 md:hover:text-brand-hoverL"} >
-                {link.text}
-              </NavLink>
-            </a>
+            < NavLink key={link.id} to={link.to} className={({ isActive }) => isActive ?
+              "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL " :
+              "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0 md:hover:text-brand-hoverL border-brand-default border-solid border-2"} >
+              {link.text}
+            </NavLink>
           ))}
         </div>
         <div className='flex justify-center items-center mx-2 p-2'>

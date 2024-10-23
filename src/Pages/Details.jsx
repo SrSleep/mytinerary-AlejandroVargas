@@ -34,12 +34,12 @@ console.log(city);
 
   return (
     <div className="flex flex-col justify-center items-center h-[93vh] mb-2">
-      <p className=" text-3xl text-cyan-600">{city.name}</p>
+      <p className=" text-3xl text-brand-default">{city.name}</p>
       <img className="w-full h-64 object-cover opacity-80" src={city.image} alt="descirpciond city" />
       <button type="button" className=" flex items-center text-white font-medium rounded-lg text-sm p-2  md:px-3 md:py-2 text-center bg-brand-default hover:bg-brand-hoverD" onClick={() => BackCities()}>
         Back
       </button>
-      <p className=" text-9xl text-cyan-600 ">Under construction</p>
+      <p className=" text-4xl lg:text-9xl text-brand-default text-center ">Under construction</p>
     </div>
   );
 }
