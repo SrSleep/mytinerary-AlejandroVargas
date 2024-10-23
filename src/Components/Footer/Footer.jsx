@@ -8,7 +8,7 @@ const Footer = (links) => {
           {links?.Links.map((link) => (
             < NavLink key={link.id} to={link.to} className={({ isActive }) => isActive ?
               "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL " :
-              "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0 md:hover:text-brand-hoverL"} >
+              "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0 md:hover:text-brand-hoverL border-brand-default border-solid border-2"} >
               {link.text}
             </NavLink>
           ))}
