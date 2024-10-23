@@ -7,7 +7,7 @@ const CityImage = () => {
             <h3 className="font-bold text-white text-center text-2xl md:text-4xl p-2">
                 Cities
             </h3>
-            <p className="font-light text-gray-400 text-center text-xl md:text-2xl p-2 text-shadow">
+            <p className="font-thin text-white text-center text-xl md:text-2xl p-2 text-shadow p-">
                 Collection of the most beautiful places and experience
             </p>
         </div>
