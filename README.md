@@ -1,8 +1,31 @@
-# React + Vite
+# Travel Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This travel website is built using the MERN stack (MongoDB, Express, React, Node.js). It provides an intuitive user experience for exploring destinations, booking trips, and managing itineraries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Dynamic Front-End**: Built with React, offering a responsive and interactive user interface.
+- **Powerful Back-End**: Utilizing Node.js and Express for handling API requests and server-side logic.
+- **Database Management**: MongoDB is used for efficient data storage and management.
+- **User Authentication**: Secure user login and registration for personalized experiences.
+- **Trip Booking**: Users can explore and book various travel destinations.
+- **Itinerary Management**: Users can create and manage their travel itineraries.
+
+## Technologies Used
+
+- **Frontend**: React, React Router, Axios
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Other**: JWT for authentication, Bootstrap for styling
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm (Node package manager)
+- MongoDB
