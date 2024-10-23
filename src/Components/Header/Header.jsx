@@ -43,7 +43,7 @@ const Header = (links) => {
               {links?.Links.map((link) => (
                 <li key={link.id}>  
                  < NavLink to={link.to} className={({isActive})=>isActive? 
-                 "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL md:p-0":
+                 "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL md:p-0 animate-pulse":
                  "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0 md:hover:text-brand-hoverL" } > 
                 {link.text}
                  </NavLink>

@@ -15,7 +15,7 @@ const Hero = () => {
 
           <NavLink
             to={"/cities"}
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-default hover:bg-brand-hoverD focus:ring-4 focus:ring-white"
+            className="inline-flex items-center animate-bounce justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-brand-default hover:bg-brand-hoverD focus:ring-4 focus:ring-white"
           >
             Get started <ArrowRight className="w-8 h-8 ms-1" color="#f7f7f7" />{" "}
           </NavLink>

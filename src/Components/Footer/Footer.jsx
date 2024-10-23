@@ -7,13 +7,13 @@ const Footer = (links) => {
         <div className='flex justify-center mx-2 items-center gap-2'>
           {links?.Links.map((link) => (
             < NavLink key={link.id} to={link.to} className={({ isActive }) => isActive ?
-              "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL " :
-              "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0 md:hover:text-brand-hoverL border-brand-default border-solid border-2"} >
+              "block py-2 px-3 rounded-lg text-white bg-brand-default  md:bg-transparent md:text-brand-hoverL animate-pulse" :
+              "block py-2 px-3 rounded-lg text-white hover:bg-brand-default md:hover:bg-transparent md:p-0  border-brand-default border-solid border-2"} >
               {link.text}
             </NavLink>
           ))}
         </div>
-        <div className='flex justify-center items-center mx-2 p-2'>
+        <div className='flex justify-center items-center mx-2 p-2 flex-wrap'>
           <div className='flex flex-row items-center rounded-lg px-3'>
             <a href='' target='_blank' rel='noopener noreferrer'>
               <FacebookLogo className='w-6 h-6 me-1' color="#669900" />
