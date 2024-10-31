@@ -8,7 +8,7 @@ export default function StandarLayout() {
   return (
     <>
       <Header Links={links} />
-      <main className=' w-full'>
+      <main className=' w-full min-h-[95vh]'>
         <Outlet></Outlet>
       </main>
       <Footer Links={links} />
