@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { getCities } from "../../store/actions/cityActions";
 import CityImage from "../CityImage/CityImage"
 import SearchBar from "../SearchBar/SearchBar"
@@ -13,22 +12,7 @@ const City = () => {
   useEffect(() => {
     dispatch(getCities());
   }, [])
-  const textSearchHandler = (text) => {
-    setTextSearch(text);
-    const urlApi = `http://localhost:8080/api/city/all?name=${text}`
-    fetch(urlApi)
-      .then((response) => response.json())
-      .then((data) => {
-        // setCities(data.cities)
-
-
-      })
-      .catch((error) => {
-        console.error('Error al obtener los datos:', error);
-      })
-
-
-  }
+  
 
   return (
     <>
