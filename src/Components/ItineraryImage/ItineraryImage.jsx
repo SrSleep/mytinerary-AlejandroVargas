@@ -1,15 +1,11 @@
-import ItineraryImage from "../Components/ItineraryImage/ItineraryImage"
-import Itinerary from "../Components/Itinerary/Itinerary";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-export default function Details() {
-  const { city } = useSelector((state) => state.itineraryStore);
- 
-
-  return (
-    <div>
-      <ItineraryImage></ItineraryImage>
-      {/* <div className="relative">
+const ItineraryImage = () => {
+    const { city } = useSelector((state) => state.itineraryStore);
+    
+return(
+<div className="relative">
         <div className=" w-full  z-0 pt-16">
           <img className="w-full h-64 object-cover opacity-70"  src={city?.image || (city?.[0]?.cityId?.image)} alt="City image" />
         </div>
@@ -22,8 +18,9 @@ export default function Details() {
             Back to cities
           </NavLink>
         </div>
-      </div> */}
-      <Itinerary></Itinerary>
-    </div>
-  );
+      </div>
+)
+
 }
+
+export default ItineraryImage

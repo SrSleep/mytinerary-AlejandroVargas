@@ -1,10 +1,10 @@
-import React from 'react';
+import { useState } from 'react';
 import travel from '../../assets/icon.svg';
 import { UserCircle, List } from "@phosphor-icons/react";
 import { NavLink } from 'react-router-dom';
 
 const Header = (links) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='fixed left-0 right-0 t-0 l-0 z-50 backdrop-blur-md bg-gray-900/80'>
