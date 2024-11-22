@@ -19,12 +19,12 @@ const Header = (links) => {
             </span>
           </a>
           <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
-            <button
+            <NavLink to={'/singin'}
               type='button'
               className='flex items-center text-white font-medium rounded-lg text-sm px-1  md:px-3 md:py-2 text-center bg-brand-default hover:bg-brand-hoverD '>
               <UserCircle className='w-5 h-5 me-1' color="#f7f7f7" />
-              Login
-            </button>
+              Sign In
+            </NavLink>
             <button
               
               type='button'
