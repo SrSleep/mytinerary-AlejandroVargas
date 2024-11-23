@@ -4,7 +4,7 @@ import { useSelector} from "react-redux";
 const CitiesDiv = () => {
     const { cities } = useSelector((state) => state.cityStore);
     return (
-        <div className="flex justify-around flex-wrap items-center my-2">
+        <div className="flex justify-around flex-wrap items-center gap-2 my-2">
             {cities.length === 0 ? ( 
                 <div className="relative h-[50vh] w-11/12 mb-2 text-custom-gradient flex items-center justify-center text-5xl text-center">
                     <img className="absolute inset-0 -z-10 w-full h-full object-cover opacity-70 rounded-2xl" src="/Images/notFound.jpg" alt="image of a desert" />
