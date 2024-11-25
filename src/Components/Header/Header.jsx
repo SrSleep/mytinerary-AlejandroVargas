@@ -9,6 +9,7 @@ const Header = (links) => {
   const [isOpen, setIsOpen] = useState(false);
   const email = useSelector(state => state.authStore?.user?.email);
   const token = useSelector(state => state.authStore.token);
+  const image = useSelector(state => state.authStore?.user?.photo);
   const dispatch = useDispatch();
 
   return (
@@ -29,7 +30,7 @@ const Header = (links) => {
                 onClick={() => dispatch( signOut({ email, token }) ) }
                 type='button'
                 className='flex items-center text-white font-medium rounded-lg text-sm px-1 md:px-3 md:py-2 text-center bg-red-800 hover:bg-red-600'>
-                <UserCircle className='w-5 h-5 me-1' color="#f7f7f7" />
+                  <img className='w-5 h-5 me-1 rounded-full object-cover bg-white' src={`https://robohash.org/${image}`} alt="photo perfil" />
                 Sign Out
               </button>
             ) : (
