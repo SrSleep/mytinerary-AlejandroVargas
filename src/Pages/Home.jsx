@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../store/actions/authActions';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 export default function Home() {
   const loginWithToken = async (token) => {
     try {

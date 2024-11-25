@@ -6,6 +6,7 @@ import Cities from "./Pages/Cities";
 import NotFound from "./Pages/NotFound";
 import Details from "./Pages/Details"
 import SignIn from "./Pages/SignIn"
+import SignUp from "./Pages/Register"
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import SignRoute from "./Components/SignRoute/SignRoute";
 import axios from "axios";
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     element: <SimpleLayout />,
     children: [
       { path: "/signin", element: <SignRoute><SignIn /></SignRoute> },
+      { path: "/signup", element: <SignRoute><SignUp /></SignRoute> },
     ]
   },
   { path: "/*", element: <NotFound /> },
@@ -34,9 +36,9 @@ const router = createBrowserRouter([
 const loginWithToken = async (token) => {
   try {
     const response = await axios.get("http://localhost:8080/api/auth/validatetoken", { headers: { Authorization: `Bearer ${token}` } });
-    console.log("LOG de response app: ", response.data);
 
     return response.data.user;
+    
   } catch (error) {
     console.log(error);
   }

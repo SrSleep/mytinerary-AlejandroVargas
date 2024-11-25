@@ -11,36 +11,44 @@ const setUser = createAction("SET_USER", (datos) => {
 
 const signOut = createAsyncThunk("SIGN_OUT", async ({ email, token }, { rejectWithValue }) => {
     try {
-        console.log("entramos signOut");
         const response = await axios.post(`http://localhost:8080/api/auth/signout`, email, { headers: { Authorization: `Bearer ${token}` } });
         return response.data
     } catch (error) {
-        console.log("Error en signOut");
-
+        console.log(error);
+        
         return rejectWithValue("Something went wrong: " + error.response.data.message);
     }
-
 })
 
 
 const login = createAsyncThunk("LOGIN", async ({ email, password }, { rejectWithValue }) => {
     try {
-        console.log("entramos log");
-
         const credentials = { email, password };
         const response = await axios.post(`http://localhost:8080/api/auth/signin`, credentials);
-
-        console.log("response :", response.data);
         localStorage.setItem("token", response.data.token);
-
         return response.data;
     } catch (error) {
-        // Si el error es del backend, usamos el rejectWithValue para pasar el mensaje de error
-        console.log("Error en login:", error.response.data.message);
-
-        // Devolvemos el error al estado de Redux
         return rejectWithValue("Something went wrong: " + error.response.data.message);
     }
 });
 
-export { login, setUser, signOut };
+const signUp = createAsyncThunk("SIGN_UP", async ({ email, password, name, lastName, country, fileName }, { rejectWithValue }) => {
+
+    try {
+        const userData = { email, password, name, lastName, cityId: country, photo: fileName };
+
+        const response = await axios.post(`http://localhost:8080/api/user/register`, userData);
+
+        return response.data;
+
+    } catch (error) {
+
+        const errorMessages = Array.isArray(error.response.data.message)
+            ? error.response.data.message.filter(err => err.message).map(err => err.message)
+            : (error.response.data.message ? [error.response.data.message] : []);
+
+        return rejectWithValue(errorMessages);
+    }
+});
+
+export { login, setUser, signOut, signUp };

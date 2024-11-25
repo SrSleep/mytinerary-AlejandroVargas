@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { login, setUser, signOut } from "../actions/authActions";
+import { login, setUser, signOut, signUp } from "../actions/authActions";
 
 const initialState = {
     loading: false,
@@ -10,6 +10,13 @@ const initialState = {
 
 export const authReducer = createReducer(initialState, (builder) => {
     builder
+        //setUser
+        .addCase(setUser, (state, action) => {
+            state.user = action.payload.user
+            state.token = action.payload.token
+        })
+
+        //login 
         .addCase(login.fulfilled, (state, action) => {
             console.log("se ejecuto fullfilled");
 
@@ -33,16 +40,14 @@ export const authReducer = createReducer(initialState, (builder) => {
                 state.token = null
             localStorage.removeItem("token")
         })
-        .addCase(setUser, (state, action) => {
-            state.user = action.payload.user
-            state.token = action.payload.token
-        })
+
+        //signOut
         .addCase(signOut.fulfilled, (state, action) => {
             state.loading = false,
                 state.error = false,
                 state.user = null,
                 state.token = null
-                localStorage.removeItem("token");
+            localStorage.removeItem("token");
         })
         .addCase(signOut.pending, (state, action) => {
             state.loading = true,
@@ -51,5 +56,21 @@ export const authReducer = createReducer(initialState, (builder) => {
         .addCase(signOut.rejected, (state, action) => {
             state.loading = false,
                 state.error = false
+        })
+        //signUp
+        .addCase(signUp.fulfilled, (state, action) => {
+            state.loading = false,
+                state.error = false
+                state.user = action.payload.user
+                state.token = action.payload.token
+                localStorage.setItem("token", action.payload.token)
+        })
+        .addCase(signUp.pending, (state, action) => {
+            state.loading = true,
+                state.error = false
+        })
+        .addCase(signUp.rejected, (state, action) => {
+            state.loading = false,
+                state.error = action.payload
         })
 })

@@ -33,9 +33,9 @@ export default function SignForm() {
             <section className="bg-transparent">
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-screen md:h-screen lg:py-0">
                     <NavLink to='/'
-                        className="flex items-center mb-6 p-3  rounded-2xl text-2xl font-semibold text-white bg-brand-hoverD hover:bg-brand-default"
+                        className="flex items-center mb-6 p-3  rounded-2xl text-sm md:text-2xl font-semibold text-white bg-brand-hoverD hover:bg-brand-default"
                     >
-                        <img className="w-8 h-8 mr-2" src="/src/assets/icon.svg" alt="logo" />
+                        <img className="w-5 h-5 md:w-8 md:h-8 mr-2 " src="/src/assets/icon.svg" alt="logo" />
                         RETURN TO HOME
                     </NavLink>
 
