@@ -20,7 +20,8 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/home", element: <Home /> },
       { path: "/cities", element: <Cities /> },
-      { path: "/citydetails", element: <><PrivateRoute><Details /></PrivateRoute></> },
+      { path: "/citydetails", element: <Details /> },
+      //<><PrivateRoute><Details /></PrivateRoute></>
     ],
   },
   {
@@ -38,7 +39,7 @@ const loginWithToken = async (token) => {
     const response = await axios.get("http://localhost:8080/api/auth/validatetoken", { headers: { Authorization: `Bearer ${token}` } });
 
     return response.data.user;
-    
+
   } catch (error) {
     console.log(error);
   }
